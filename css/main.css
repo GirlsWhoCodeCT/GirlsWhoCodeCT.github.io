@@ -5,6 +5,7 @@
 * {
     line-height: 1.2;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -17,21 +18,26 @@ html {
 }
 
 body {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 h1 {
     color: #FFF;
     font-size: 2em;
+    font-family: 'Source Code Pro', monospace;
 }
 
 h2 {
     font-size: 1.25em;
+    font-family: 'Source Code Pro', monospace;
 }
 
 h3 {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 400;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 0.7em;
+    color: #01426a;
 }
 
 .gwc-red {
@@ -46,11 +52,22 @@ h3 {
 .flex-container {
     display: flex;
     flex-flow: row wrap;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .flex-container > div {
     flex: 1 100%;
-    padding: 20px;
+    padding: 1em 2em;
+}
+
+.main-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.row {
+    padding: 0.5em;
 }
 
 /* ==========================================================================
@@ -62,9 +79,13 @@ header {
     margin-bottom: 2em;
 }
 
+.header-right,
+.header-left {
+    justify-content: center;
+}
+
 .gwc-logo {
     width: 200px;
-    margin: 0 auto;
 }
 
 .keyboard-cat {
@@ -78,21 +99,60 @@ header {
 
 .vertical-align-flex {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+
+/* Post */
+.post {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 2px dotted #2fdec9;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.post-image {
+    flex: 1 100%;
+}
+
+.post-image img {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.post-text {
+    flex: 1 100%;
+    text-align: left;
+    padding: 0 1em;
 }
 
 
 /* Medium screens */
 @media all and (min-width: 600px) {
 
-    header.flex-container > div {
+    .flex-container > div {
         flex: 1 auto;
     }
 
-    h3 {
-        font-size: 2em;
-        font-weight: 400;
+    .header-right {
+        justify-content: flex-end;
     }
+
+    .header-left {
+        justify-content: flex-start;
+    }
+
+    .post-image {
+        flex: 1 30%;
+    }
+
+    .post-text {
+        flex: 1 65%;
+    }
+
+    .post-image {
+        margin: 0;
+    }
+
 }
 
