@@ -49,6 +49,9 @@ nav {
 nav a {
     color: #ffffff;
     text-decoration: none;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 nav a:hover {
