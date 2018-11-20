@@ -40,6 +40,21 @@ h3 {
     color: #01426a;
 }
 
+nav {
+    flex-direction: column;
+    justify-content: center;
+    display: inline-flex;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #f4364c;   
+}
+
 .gwc-red {
     color: #f4364c;
 }
